@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+		<div id="main">
+			<div class="col-md-8 col-md-offset-4">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-2">
+							<a href="#" class="active" id="met1">Metoda 1</a>
+						</div>
+						<div class="col-xs-2">
+							<a href="#" id="met2">Metoda 2</a>
+						</div>
+						<div class="col-xs-2">
+							<a href="#" id="met3">Metoda 3</a>
+						</div>		
+					</div>
+				</div>
+			</div>  
+			<br><br>
+			<div id ="cont">
+				<div id="met1-b" class="active">
+					<a id="popoverData1" class="btn" href="#" data-content='Metoda będąca połączeniem dwóch sieci imitujących dataset MNIST
+					<br /><br />
+					Aby wylosować wciśnij jeden z 3 przycisków poniżej <br /> <br />
+					"Kolorowe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach o różnokolorowych tłach - epoch 210 <br />
+					"Białe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach tylko z białymi tłami - epoch 200 <br />
+					"Tydzień" wygeneruje losowe pokemony używając sieci wytrenowanej w sposób jak przy "Kolorowe Tło", ale uczonej przez tydzień' 
+					rel="popover" data-placement="bottom" data-original-title="Legenda" data-trigger="hover">
+						Legenda
+					</a><br />
+					<img id="met1_1" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met1_2" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met1_3" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met1_4" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met1_5" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<br />
+					<button id="met1-bt" class="big-button" style="margin: 40px;"> Kolorowe Tło </button>
+					<button id="met4-bt" class="big-button" style="margin: 40px;"> Białe Tło </button>
+					<button id="met7-bt"  class="big-button" style="margin: 40px;"> Tydzień </button>
+				</div>
+				<div id="met2-b" class="hidden">
+					<a id="popoverData2" class="btn" href="#" data-content='Metoda z artykułu o generowaniu pokemonów
+					<br /><br />
+					Aby wylosować wciśnij jeden z 2 przycisków poniżej <br /> <br />
+					"Kolorowe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach o różnokolorowych tłach - epoch 70 <br />
+					"Białe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach tylko z białymi tłami - epoch 90' 
+					rel="popover" data-placement="bottom" data-original-title="Legenda" data-trigger="hover">
+						Legenda
+					</a><br />
+					<img id="met2_1" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met2_2" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met2_3" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met2_4" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met2_5" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<br />
+					<button id="met2-bt" class="big-button" style="margin: 40px;"> Kolorowe Tło </button>
+					<button id="met5-bt" class="big-button" style="margin: 40px;"> Białe Tło </button>
+				</div>
+				<div id="met3-b" class="hidden">
+					<a id="popoverData3" class="btn" href="#" data-content='Zmodyfikowana Metoda 1 m.in.: zmieniona funkcja aktywacji, zakres ziarna oraz funkcja aktywacji
+					<br /><br />
+					Aby wylosować wciśnij jeden z 2 przycisków poniżej <br /> <br />
+					"Kolorowe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach o różnokolorowych tłach - epoch 100 <br />
+					"Białe Tło" wygeneruje losowe pokemony używając sieci wytrenowanej na obrazach tylko z białymi tłami - epoch 120' 
+					rel="popover" data-placement="bottom" data-original-title="Legenda" data-trigger="hover">
+						Legenda
+					</a><br />
+					<img id="met3_1" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met3_2" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met3_3" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met3_4" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<img id="met3_5" width="96" height="96" style="margin: 40px;" src="abc.png"></img>
+					<br />
+					<button id="met3-bt" class="big-button" style="margin: 40px;"> Kolorowe Tło </button>
+					<button id="met6-bt" class="big-button" style="margin: 40px;"> Białe Tło </button>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
